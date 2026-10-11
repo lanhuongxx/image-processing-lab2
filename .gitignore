@@ -1,0 +1,17 @@
+# Môi trường Python
+.venv/
+venv/
+
+# File tạm
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Thông tin môi trường
+.env
+
+# Ảnh kết quả riêng có thể tạo lại
+outputs/images/
