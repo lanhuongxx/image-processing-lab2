@@ -1,4 +1,4 @@
-# B1: Đọc, kiểm tra dữ liệu hình ảnh từ tệp và lưu ảnh
+# B1: Đọc ảnh, lưu ảnh, in thông tin cơ bản của ảnh
 from pathlib import Path
 
 import cv2

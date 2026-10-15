@@ -14,7 +14,7 @@ def brightness(image, beta):
 
 # điều chỉnh độ tương phản ảnh
 def contrast(image, alpha):
-    """Thay đổi tương phản theo đề: g = alpha * f."""
+    """Thay đổi tương phản: g = alpha * f."""
     if alpha < 0:
         raise ValueError("alpha phải lớn hơn hoặc bằng 0")
 
@@ -26,7 +26,7 @@ def negative(image):
     """Ảnh âm bản: g = 255 - f."""
     return 255 - image
 
-# cắt ngưỡng tạo ảnh nhị phân
+# phân ngưỡng tạo ảnh nhị phân
 def binary_threshold(gray, threshold):
     """Pixel >= threshold thành 255, còn lại thành 0."""
     if gray.ndim != 2:

@@ -5,10 +5,12 @@ import numpy as np
 # Phản chiếu các pixel tại biên ảnh.
 BORDER = cv2.BORDER_REFLECT_101
 
+# kiểm tra kích thước kernel có hợp lệ không (số nguyên dương lẻ)
 def check_kernel_size(k):
     if not isinstance(k, int) or k < 1 or k % 2 == 0:
         raise ValueError("k phải là số nguyên dương lẻ")
-    
+
+# Lọc trung bình và lọc Gaussian  
 def mean_filter(image, k=3):
     """Lọc trung bình với kernel k × k."""
     check_kernel_size(k)
@@ -18,7 +20,6 @@ def mean_filter(image, k=3):
         (k, k),
         borderType=BORDER,
     )
-
 
 def gaussian_filter(image, k=5, sigma=1.0):
     """Lọc Gaussian với kích thước k và độ lệch chuẩn sigma."""
@@ -34,7 +35,6 @@ def gaussian_filter(image, k=5, sigma=1.0):
         sigmaY=sigma,
         borderType=BORDER,
     )
-
 
 def apply_kernel(image, kernel):
     """Áp dụng kernel, trả về float32 để giữ đáp ứng có dấu."""
@@ -68,7 +68,7 @@ def sharpen(image):
     return np.clip(result, 0, 255).astype(np.uint8)
 
 
-# P3: Lọc trung vị và lọc song phương
+# P3: Nâng cao - Lọc trung vị và lọc song phương
 def median_filter(image, k):
     check_kernel_size(k)
     return cv2.medianBlur(image, k)

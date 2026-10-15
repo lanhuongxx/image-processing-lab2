@@ -1,3 +1,4 @@
+# P3: Nâng cao - Tạo nhiễu Gaussian và nhiễu muối tiêu
 import numpy as np
 
 

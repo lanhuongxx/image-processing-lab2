@@ -149,5 +149,3 @@ Dự án này được xây dựng nhằm mục đích thực hành các kỹ th
 - phát hiện biên,
 - khử nhiễu,
 - so sánh chất lượng ảnh bằng metric số.
-
-Nếu bạn muốn, tôi có thể tiếp tục viết thêm một phiên bản README theo kiểu chuyên nghiệp hơn với badge, demo screenshots và hướng dẫn chi tiết cho từng module.
